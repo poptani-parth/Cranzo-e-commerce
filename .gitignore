@@ -1,10 +1,37 @@
-HELP.md
+# ===========================
+# JAVA & MAVEN
+# ===========================
 target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### STS ###
+# ===========================
+# SPRING BOOT SECRETS
+# ===========================
+**/src/main/resources/application-prod.properties
+**/src/main/resources/application-local.properties
+**/src/main/resources/application-secret.properties
+*.env
+.env
+
+# ===========================
+# IDE - IntelliJ IDEA
+# ===========================
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# ===========================
+# IDE - Eclipse / STS
+# ===========================
 .apt_generated
 .classpath
 .factorypath
@@ -12,14 +39,11 @@ target/
 .settings
 .springBeans
 .sts4-cache
+.eclipse
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
+# ===========================
+# IDE - NetBeans
+# ===========================
 /nbproject/private/
 /nbbuild/
 /dist/
@@ -29,5 +53,34 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
+# ===========================
+# IDE - VS Code
+# ===========================
 .vscode/
+
+# ===========================
+# OS FILES
+# ===========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ===========================
+# LOGS
+# ===========================
+*.log
+logs/
+log/
+
+# ===========================
+# MISC
+# ===========================
+*.tmp
+*.swp
+*.bak
+HELP.md
