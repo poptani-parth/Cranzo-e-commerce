@@ -1,5 +1,6 @@
 package com.e_commerce.Cranzo.Service;
 
+import com.e_commerce.Cranzo.Config.Security.CustomUserDetailsSecurity;
 import com.e_commerce.Cranzo.Entity.User;
 import com.e_commerce.Cranzo.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,12 +23,6 @@ public class CustomUserDetailsService implements UserDetailsService {
                 .orElseThrow(() ->
                         new UsernameNotFoundException("Username not found"));
 
-        return new org.springframework.security.core.userdetails.User(
-                user.getEmail(),
-                user.getPassword(),
-                user.getRoles().stream()
-                        .map(role -> new SimpleGrantedAuthority(role.getName().name()))
-                        .toList()
-        );
+        return new CustomUserDetailsSecurity(user);
     }
 }
