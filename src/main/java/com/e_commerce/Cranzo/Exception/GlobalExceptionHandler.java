@@ -1,4 +1,4 @@
-package com.e_commerce.Cranzo.Config.Exception;
+package com.e_commerce.Cranzo.Exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

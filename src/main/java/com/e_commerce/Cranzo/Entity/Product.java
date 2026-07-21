@@ -1,6 +1,9 @@
 package com.e_commerce.Cranzo.Entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.math.BigDecimal;
@@ -8,6 +11,9 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "products")
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,5 +37,6 @@ public class Product {
     private Category category;
 
     @CreationTimestamp
+    @Column(updatable = false)
     private LocalDateTime createdAt;
 }

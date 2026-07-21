@@ -20,6 +20,9 @@ public class Category {
     @Column(nullable = false)
     private String name;
 
+    @Column(columnDefinition = "TEXT")
+    private String description;
+
     @Column(unique = true)
     private String slug;
 

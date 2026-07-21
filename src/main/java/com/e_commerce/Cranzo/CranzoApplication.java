@@ -8,5 +8,6 @@ public class CranzoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CranzoApplication.class, args);
+		//System.out.println(new BCryptPasswordEncoder().encode("parth@123"));
 	}
 }
